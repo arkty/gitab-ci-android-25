@@ -10,7 +10,7 @@ ENV SDK_PACKAGES "build-tools-${VERSION_BUILD_TOOLS},android-${VERSION_TARGET_SD
 ENV ANDROID_HOME "/sdk"
 ENV PATH "$PATH:${ANDROID_HOME}/tools"
 ENV DEBIAN_FRONTEND noninteractive
-RUN ntpclient -s -h pool.ntp.org
+
 RUN apt-get -qq update && \
     apt-get install -qqy --no-install-recommends \
       curl \
